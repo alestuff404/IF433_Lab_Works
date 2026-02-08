@@ -6,10 +6,19 @@ fun main() {
 
     val finalPrice = calculateDiscount(price)
 
-    println(finalPrice)
+    printReceipt(
+        title = gameTitle,
+        finalPrice = finalPrice
+    )
 }
 
 fun calculateDiscount(price: Int): Int =
     if (price > 500_000) price - (price * 20 / 100)
     else price - (price * 10 / 100)
+
+fun printReceipt(title: String, finalPrice: Int) {
+    println("Game Title : $title")
+    println("Final Price: Rp $finalPrice")
+}
+
 
