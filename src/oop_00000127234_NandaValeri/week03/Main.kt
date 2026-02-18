@@ -15,4 +15,9 @@ fun main() {
     weapon.damage = 9999
     println("Damage: ${weapon.damage}")
     println("Tier: ${weapon.tier}")
+
+    println("\n===== PLAYER TEST =====")
+    val player = Player("Nanda")
+    player.addXp(50)
+    player.addXp(60)
 }
