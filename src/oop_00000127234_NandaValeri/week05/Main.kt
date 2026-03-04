@@ -39,7 +39,7 @@ fun main() {
     println("Luas Lingkaran: ${mathHelper.hitungLuas(7.0)}")
 
     // ==================================================
-    // 3️⃣ ABSTRACTION + POLYMORPHISM (Checkpoint 10)
+    // 3️⃣ ABSTRACTION + POLYMORPHISM + SMART CASTING (Checkpoint 11)
     // ==================================================
     println("\n=== SISTEM PEMBAYARAN ===")
 
@@ -49,7 +49,18 @@ fun main() {
     val methods: List<PaymentMethod> = listOf(ewallet, creditCard)
 
     for (method in methods) {
+
         method.processPayment(75000.0)
+
+        // SMART CASTING
+        if (method is EWallet) {
+            println("-> EWallet terdeteksi. Melakukan top up 50000...")
+            method.topUp(50000.0)
+
+            println("-> Mencoba pembayaran ulang...")
+            method.processPayment(75000.0)
+        }
+
         println("-------------------------------")
     }
 }
