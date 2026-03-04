@@ -2,9 +2,9 @@ package oop_00000127234_NandaValeri.week05
 
 fun main() {
 
-    // ===============================
-    // POLYMORPHISM (OVERRIDING)
-    // ===============================
+    // ==================================================
+    // 1️⃣ RUNTIME POLYMORPHISM (Pegawai)
+    // ==================================================
     val dosen1 = Dosen("Pak Alex", "0123456")
     val admin1 = Admin("Bu Siti")
 
@@ -27,19 +27,29 @@ fun main() {
         println("-------------------------------")
     }
 
-    // ===============================
-    // POLYMORPHISM (OVERLOADING)
-    // ===============================
-    println("\n=== PERHITUNGAN LUAS BANGUN DATAR ===")
+    // ==================================================
+    // 2️⃣ COMPILE-TIME POLYMORPHISM (Overloading)
+    // ==================================================
+    println("\n=== PERHITUNGAN LUAS ===")
 
     val mathHelper = MathHelper()
 
-    val luasPersegi = mathHelper.hitungLuas(4)
-    println("Luas Persegi (sisi = 4): $luasPersegi")
+    println("Luas Persegi: ${mathHelper.hitungLuas(4)}")
+    println("Luas Persegi Panjang: ${mathHelper.hitungLuas(5, 3)}")
+    println("Luas Lingkaran: ${mathHelper.hitungLuas(7.0)}")
 
-    val luasPersegiPanjang = mathHelper.hitungLuas(5, 3)
-    println("Luas Persegi Panjang (5 x 3): $luasPersegiPanjang")
+    // ==================================================
+    // 3️⃣ ABSTRACTION + POLYMORPHISM (Checkpoint 10)
+    // ==================================================
+    println("\n=== SISTEM PEMBAYARAN ===")
 
-    val luasLingkaran = mathHelper.hitungLuas(7.0)
-    println("Luas Lingkaran (r = 7.0): $luasLingkaran")
+    val ewallet = EWallet("Nanda", 50000.0)
+    val creditCard = CreditCard("Nanda", 100000.0)
+
+    val methods: List<PaymentMethod> = listOf(ewallet, creditCard)
+
+    for (method in methods) {
+        method.processPayment(75000.0)
+        println("-------------------------------")
+    }
 }
