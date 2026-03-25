@@ -12,8 +12,8 @@ fun main() {
     client.connect()
 
     println("\n=== TEST REGULER CLASS ===")
-    val reg1 = RegulerUser("Alice", 22)
-    val reg2 = RegulerUser("Alice", 22)
-    println(reg1) // akan mencetak memori hash
-    println("Sama? ${reg1 == reg2}") // false
+    val data1 = DataUser("Alice", 22)
+    val data2 = DataUser("Alice", 22)
+    println(data1) // otomatis readable format
+    println("Sama? ${data1 == data2}") // true
 }
