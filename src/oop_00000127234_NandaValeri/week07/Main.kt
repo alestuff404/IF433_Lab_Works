@@ -37,4 +37,10 @@ fun main() {
     println("\n[Drop Chance Legendary: ${ItemRarity.LEGENDARY.dropChance}%]")
     val playerWeapon = Weapon.forgeStarterSword()
     println("Senjata: ${playerWeapon.item.name} | Damage: ${playerWeapon.item.damage}")
+    val upgradedItem = playerWeapon.item.copy(damage = 25)
+    println("\n--- Event Log ---")
+    processEvent(SafeZone)
+    processEvent(MonsterEncounter("Goblin Nakal"))
+    processEvent(LootDropped(upgradedItem))
+    processEvent(GameOver("Terkena jebakan racun"))
 }
