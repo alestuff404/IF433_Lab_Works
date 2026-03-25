@@ -34,4 +34,7 @@ fun main() {
     println("\n\n=== SIMULASI GAME RPG (TUGAS MANDIRI) ===")
     GameManager.startGame()
     GameManager.startGame()
+    println("\n[Drop Chance Legendary: ${ItemRarity.LEGENDARY.dropChance}%]")
+    val playerWeapon = Weapon.forgeStarterSword()
+    println("Senjata: ${playerWeapon.item.name} | Damage: ${playerWeapon.item.damage}")
 }
