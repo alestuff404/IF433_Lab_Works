@@ -1,6 +1,7 @@
 package oop_00000127234_NandaValeri.week09
 
 fun main() {
+    // ini tadi kelewat commit kak/pak sorryyy
     val tradeHistory = listOf(
         TradeLog("BTCUSDT", "LONG", 20, 15.5, "CLOSED"),
         TradeLog("ETHUSDT", "SHORT", 10, -5.2, "CLOSED"),
