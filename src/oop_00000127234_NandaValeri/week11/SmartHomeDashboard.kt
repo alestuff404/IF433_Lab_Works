@@ -28,5 +28,9 @@ fun main() {
         println(it.diagnose())
     }
 
+    with(homeDevices) {
+        println("Rangkuman Sistem: Terdeteksi ${this.size} perangkat.")
+    }
+
 
 }
