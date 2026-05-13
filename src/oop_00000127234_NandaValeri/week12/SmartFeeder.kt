@@ -38,3 +38,5 @@ fun main() {
         println("(Optional: Berikan chicken jerky secara manual)")
     }
 }
+
+// sudah di run !
