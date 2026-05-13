@@ -25,4 +25,10 @@ fun main() {
     } finally {
         println("Siklus pengecekan dispenser pagi selesai.")
     }
+
+    println("\n--- Jadwal Sore ---")
+    currentKibbleStock = 1000 // Isi ulang [cite: 165]
+    runCatching {
+        dispenseKibble(30, currentKibbleStock, false)
+    }
 }
